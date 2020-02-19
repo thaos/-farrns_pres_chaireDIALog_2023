@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/simple.css">
+		<link rel="stylesheet" href="css/columns.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+        <section class="center">
+          <h2>Combination of climate simulations for (extreme) weather event attribution </h2>
+					<p>
+            <a href="https://www.lsce.ipsl.fr/Pisp/soulivanh.thao/index.php">Soulivanh Thao (LSCE)</a>
+            <br>
+            Philippe Naveau (LSCE), Aurelien Ribes (CNRM), Julien Cattiaux (CNRM)
+          </p>
+        </section>
+				<section>
+					<h2>Outline </h2>
+              <h3>
+              <ol>
+                <li>Rapid overview of what is event attribution</li>
+                <li>Multimodel analysis</li>
+              </ol>
+              </h3>
+					<p>
+          Mostly based on these two papers:
+					</p>
+          <ul>
+            <li>Ribes, A., S. Thao and J. Cattiaux, Describing the relationship between a weather event and climate change: a new statistical approach, <em>Journal of Climate</em>, accepted.</li>
+            <li>Naveau P., A. Ribes, F. Zwiers, A. Hannart, A. Tuel, P. Yiou (2018) : Revising return periods for record events in a climate event attribution context, <em>Journal of Climate</em>, 2018. </li>
+          </ul>
+				</section>
+        <section>
+          <h2> Detection and attribution </h2>
+          <blockquote>
+            <h3>Detection</h3>
+            The process of demonstrating that climate has changed in some defined <font color="blue"><strong>statistical</strong></font> sense without providing a reason for that change. 
+            An identified change is detected if its <font color="blue"><strong> likelihood </strong></font> of occurrence by chance due to <font color="blue"><strong>internal variability</strong></font> alone is determined to be small 
+          </blockquote>
+          <blockquote>
+            <h3> Attribution </h3>
+            The process of evaluating the relative contributions of multiple <font color="red"><strong>causal factors</strong></font> 
+            to a change or event with an assignment of <font color="blue"><strong>statistical</strong></font> confidence.   
+          </blockquote>
+          <p><small>
+            Source: <br>
+            IPCC AR5, Chapter 10.
+          </small></p>
+				</section>
+        <section>
+          <h2> Weather, climate and statistics </h2>
+          <img src="img/climate_meteo.png">
+        </section>
+        <section>
+          <h2> Attribution and causality </h2>
+          <p>Assessing the causal effect of human activity through the notion of intervention and counterfactuals</p><br>
+          <div class="container">
+            <div class="col">
+              <td align="center"> factual world </td>
+              <img src="img/climate_dag.png" height="200" align="center"> 
+            </div>
+            <div class="col">
+              <td align="center"> counterfactual world </td>
+              <img src="img/climate_counterfactual_dag.png" height="200" align="center"> 
+            </div>
+          </div>
+          <br><br>
+          <p><small>
+            Source: <br>
+            Hannart, A., J. Pearl, F.E. Otto, P. Naveau, and M. Ghil, 2016: Causal Counterfactual Theory for the Attribution of Weather and Climate-Related Events. <em>Bull. Amer. Meteor. Soc.</em>, 97, 99–110, https://doi.org/10.1175/BAMS-D-14-00034.1 
+          </small></p>
+        </section>
+				<section>
+          <h2> Importance of climate models in D&A </h2>
+          <p><strong> Counterfactual </strong></p>
+          <p> can never be observed in practice without a time machine. </p>
+          <p> <strong> Intervention </strong></p>
+          <p> requires to have an experimental group and a control group, which is not possible with only one Earth. </p> 
+          <h3> Solution ? </h3>
+          <p> Use climate models to perform controlled experiements.  </p> 
+          <img src="img/téléchargement.jpeg" height="150" align="middle"> 
+        </section>
+        <section>
+          <h2> Defining the event (only univariate)</h2>
+              <ol>
+                <li> Define the climate variable of interest. <br>
+                <em>e.g. temperature, precipitation, ... </em> </li> 
+                <li> Define the spatio-temporal aggregation. <br> 
+                <em>e.g. maximum over Europe of 10-day temperature averages</em> </li>
+                <li> Define the conditioning. <br>
+                <em>e.g. only during JJA, only for NAO+ circulation type</em> </li>
+                <li> Define the statistics. <br> 
+                 <em>typically,  probability of threshold exceedances</em> </br>
+                  <img src="img/extreme_da_3.png" height="250" align="center"> 
+                </li>
+              </ol>
+          <p><small>
+            More on this: <br>
+            Cattiaux, J. and A. Ribes, 2018: Defining Single Extreme Weather Events in a Climate Perspective. <em>Bull. Amer. Meteor. Soc.</em>, 99, 1557–1568, https://doi.org/10.1175/BAMS-D-17-0281.1 
+          </small></p>
+        </section>
+        <section>
+          <h2>  Estimating the probability of the event</h2>
+              <ol>
+                <li> Run climate simulations for the factual and counterfactual world. </li>
+                <li> Estimate the probability of the event in both world, $p_1$  and $p_0$:
+                  <ul>
+                    <li> by empirical counting (Bernouli trials), <br>
+                      <em> may require a very large ensemble simulations to have an accurate estimate. </em>
+                    </li>
+                    <li> by fitting a statistical model </li>    
+                    <em> require to make an assumption about the statistical distribution </em>
+                  </ul>
+                </li>
+              <ol>   
+        </section>
+        <section>
+          <h2>  Choice of the statistical distribution</h2>
+          <p> Theorems on asymptotic convergence in distribution can provide good approximations <p>
+              <ul>
+                <li> Central Limit Theorem: 
+                  <ul>
+                    <li>
+                      Gaussian distribution. <br>
+                      <em> sums </em>
+                    </li>
+                  </ul>
+                </li>
+                <li> Extreme Value Theory:
+                  <ul>
+                    <li> Generalized extreme value distribution (GEV)<br>
+                      <em> block maxima </em><br>
+                      <img src="img/blockmaxima.png" height="120">
+                    </li>
+                    <li> Generalized Pareto distribution (GPD)<br>    
+                      <em> peak over threshold, threshold exceedances </em><br>
+                      <img src="img/peakovethreshold.png" height="120">
+                    </li> 
+                  </ul>
+                </li>
+              </ul>   
+          <p><small>
+            Source: <br>
+            Coles, S. (2001) An Introduction to Statistical Modeling of Extreme Values. Springer Verlag, Berlin. 
+            http://dx.doi.org/10.1007/978-1-4471-3675-0
+          </small></p>
+        </section>
+				<section>
+          <h2> Generalized Extreme Value distribution</h2>
+          <p> 
+            The model focuses on the statistical behavior of
+            $$M_n = max\{X_1 , ... , X_n\},$$
+            where $X_l, ... , X_n$, is a sequence of independent random variables having
+            a common distribution function $F$
+          </p> 
+          <p> <strong> Theorem </strong> <br>
+          If there exist sequences of constants $\{a_n > 0\}$ and $\{b_n\}$ such that
+          $$ \mathbb{P}\{(M_n - b_n)/a_n \leq z \} \rightarrow G(z) \text{ as } n \rightarrow \infty $$  
+          for a non-degenerate distribution function $G$, then $G$ is a member of the GEV family
+          $$ G(z) = \exp\left\{-\left[1 + \xi \left(\frac{z - \mu}{\sigma}\right)\right]^{-1/\xi}\right\},$$
+          defined on $\{z : 1 + \xi (z - \mu) / \sigma \geq 0\}$, where $-\infty < \mu < \infty$, $\sigma > 0$ and
+          $-\infty < \xi < \infty$ <span style="float:right;">$\Box$ </span>
+          </p>
+          <p> <strong> In practice </strong>, we use the fact that under the theorem asumption
+          $$ \mathbb{P}\{M_n \leq z \} \approx G\{ (z - b_n)/a_n \} = G^*(z),$$
+          where $G^*$ is another member of the GEV family.
+          </p>
+        </section>
+				<section>
+          <h2> Generalized Pareto Distribution (GPD)</h2>
+          <p> 
+            The model focuses on the statistical behavior of
+            $$(X - u) | (X > u) $$
+            where X has a distribution function $F$
+          </p> 
+          <p> <strong> Theorem </strong> <br>
+          <!--If $\mathbb{P}\{M_n\leq z \} \rightarrow G(z)$  as  $m \rightarrow \infty $ where   
+          $M_n = max\{X_1 , ... , X_n\}$ and G is a member of the GEV family, then for $u$ large enough,
+          $$\mathbb{P}\{(X - u) < y| (X > u)\}  \approx H(y) = 1 - \left(1 + \frac{\xi y}{\tilde{\sigma}} \right)^{-1/\xi}$$
+          defined on $\{y : y > 0$ and $(\xi y / \tilde{\sigma}) > 0 \}$
+          where  $\tilde{\sigma} =  \sigma + \xi (u - \mu)$ <span style="float:right;">$\Box$ </span> -->
+          If as  $n \rightarrow \infty$, $M_n = max\{X_1 , ... , X_n\}$ converges in distribution towards $G$, a member of the GEV family, then for $u$ large enough,  the distribution function of $(X - u) | (X > u) $  can be approximated by 
+          $$H(y) = 1 - \left(1 + \frac{\xi y}{\tilde{\sigma}} \right)^{-1/\xi}$$
+          defined on $\{y : y > 0$ and $(\xi y / \tilde{\sigma}) > 0 \}$
+          where  $\tilde{\sigma} =  \sigma + \xi (u - \mu)$ <span style="float:right;">$\Box$ </span> 
+          </p>
+          <p> <strong> Remark. </strong> As for the GEV distribution, the shape parameter $\xi$ is characterizing the behavior of the tail of the distribution: 
+          <ul>
+            <li> $\xi < 0$, the distribution has a light tail with an upper bound equal to $\mu - \tilde{\sigma} / \xi$
+            <li> $\xi = 0$, the distribution has an exponenential tail. This case is interpreted by taking the limit,  $\lim_{\xi \rightarrow 0} H(y)$
+            <li> $\xi > 0$, the distribution has an heavy tail. 
+          </ul>
+        </section>
+				<section>
+          <h2> Case study: 2003 European Heatwave (Ribes et al. 2020)</h2>
+          <h3> Variable of interest,  $Y$ </h3> 
+            <p style="margin-left:2em">
+              Average temperature in August in Paris region, i.e. [45N - 50N] x [0E -0E]
+              Temperatures are expressed in terms of anomaly with respect to the 1961-1990 climatology.
+            </p>
+          </p> 
+          <h3> Event definition </h3>
+            <p style="margin-left:2em">
+              $$\{Y \geq s\}$$ where $s = +5.38$&deg C, the actual anomaly of temperature observed in August 2003
+            </p>
+          </p>
+				</section>
+				<section>
+          <h2> Data </h2>
+            <p>
+            Simulations from CNRM-CM5 model in the context of the Coupled Model Intercomparison Project 5 (CMIP5). </p>
+            <p>Data are extracted for the experiences: <br>
+              <ul style="margin-left:2em">
+                <li> <strong>historical</strong>, corresponding to the climate in the factual world (1850-2005)<br>
+                <li> <strong>rcp8.5</strong>, corresponding to climate projections for the future of the factual world(2006-2100)
+              </ul>
+            </p>
+            <p>
+              <strong> Remark. </strong> In this study, no "historical-nat" simulations are used to represent the counterfactual world
+            </p> 
+        </section>
+				<section>
+          <h2> Statistical Model for $Y$</h2>
+          <p>
+          In the <font color="#51361A">factual world</font>, 
+          $$ Y_t \sim  \mathcal{N}\{\mu_0 + \mu_1 \color{#51361A}{X_{all}}(t), \sigma_0 \left[1 + \sigma_1 \color{#51361A}{X_{all}}(t)\right]\} $$ 
+          where $\color{#51361A}{X_{all}}$ is the determimistic response to all external forcings of a climate variable $X$ which is assumed to be representative of climate change magnitude over time.
+          $$ X(t) = \color{#51361A}{X_{all}}(t) + \epsilon_t = \color{red}{X_{ant}}(t) + \color{green}{X_{nat}}(t) + \epsilon_t$$
+          where $\epsilon_t$ is a noise representing climate internal variability.
+          </p>
+          <p>
+          In the <font color="green">counterfactual world</font>,
+          $$ Y_t \sim  \mathcal{N}\{\mu_0 + \mu_1 \color{green}{X_{nat}}(t), \sigma_0 \left[1 + \sigma_1 \color{green}{X_{nat}}(t)\right]\} $$ 
+          </p>
+				</section>
+				<section>
+          <h2> Decomposition of the covariable X </h2>
+          <img src="img/covariable_decomposition.png" align="center"> 
+				</section>
+				<section>
+          <h2> Fit of the Gaussian model </h2>
+          <img src="img/nonstationnaryfit.png" align="center"> 
+				</section>
+				<section>
+          <h2> Estimation of the probability of the event</h2>
+          <img src="img/p0p1PRt.png" height="640" align="center"> 
+				</section>
+				<section>
+          <h2> Are different models consistent ?</h2>
+          <img src="img/PRallmodels.png" height="640" align="center"> 
+				</section>
+				<section>
+          <h2> Why the discrepancies ?</h2>
+          <p> Internal variability uncertainty </p>
+          <p> modelled as a noise, with potentially long term memory can lead to artifacts when looking at trends. Importance of the statistical model</p>
+          <p> Modelling uncertainty due to  </p>
+          <p> based on the same physical equations but potentially different approximations and parametrization. In particular, different resolution, not all processed can be numerically resolved, need for parametrization.
+          Coupling of the different component of the climate system
+          Model harder to tune due to increasing complexity
+          Climate sensitivity (global warming associated with
+a doubling of atmospheric carbon dioxide) ranges from 2 to 4.5 K (CMIP5).</p>
+          <p><small>
+            "additional complexity has multiplied
+the ways in which these biases introduce
+uncertainties in climate simulations"
+            Source: <br>
+          Stevens, B. and S. Bony, 2013 : What are climate models missing? Science, 340 (6136), 1053-1054.
+          </small></p>
+				</section>
+				<section>
+          <div class="container">
+            <div class="col">
+              Column 1 Content
+            </div>
+            <div class="col">
+              Column 2 Content
+            </div>
+          </div>
+        </section>
+				<section>Slide 2</section>
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				hash: true,
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 700,
+        height: 700,
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+        transition : 'none',
+        math: {
+					// mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+					config: 'TeX-AMS_HTML-full',
+					TeX: {
+						Macros: {
+							R: '\\mathbb{R}',
+							set: [ '\\left\\{#1 \\; ; \\; #2\\right\\}', 2 ]
+						}
+					}
+				},
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/highlight/highlight.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+      // Shows the slide number using default formatting
+      Reveal.configure({ slideNumber: true });
+
+      // Slide number formatting can be configured using these variables:
+      //  "h.v": 	horizontal . vertical slide number (default)
+      //  "h/v": 	horizontal / vertical slide number
+      //    "c": 	flattened slide number
+      //  "c/t": 	flattened slide number / total slides
+      Reveal.configure({ slideNumber: 'c/t' });
+
+      // Control which views the slide number displays on using the "showSlideNumber" value:
+      //     "all": show on all views (default)
+      // "speaker": only show slide numbers on speaker notes view
+      //   "print": only show slide numbers when printing to PDF
+      Reveal.configure({ showSlideNumber: 'all' });
+		</script>
+	</body>
+</html>
