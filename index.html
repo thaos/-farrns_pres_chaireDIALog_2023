@@ -240,17 +240,17 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 					</p> 
 				</section>
 				<section>
-					<h2> Statistical Model for $Z$</h2>
+					<h2> Statistical Model for $Y$</h2>
 					<p>
 					In the <font color="purple"><strong>factual world</strong></font>, 
-					$$ Z_t \sim  \mathcal{N}\{\mu_0 + \mu_1 \color{purple}{Y_{all}}(t), \sigma_0 \left[1 + \sigma_1 \color{purple}{Y_{all}}(t)\right]\} $$ 
-					where $\color{purple}{Y_{all}}$ is the determimistic response of a climate variable $Y$ to all external forcings. $Y$ which is assumed to be representative of climate change magnitude over time.
-					$$ Y(t) = \color{purple}{Y_{all}}(t) + \epsilon_t = \color{red}{Y_{ant}}(t) + \color{green}{Y_{nat}}(t) + \epsilon_t$$
+					$$ Y_t \sim  \mathcal{N}\{\mu_0 + \mu_1 \color{purple}{X_{all}}(t), \sigma_0 \left[1 + \sigma_1 \color{purple}{X_{all}}(t)\right]\} $$ 
+					where $\color{purple}{X_{all}}$ is the determimistic response of a climate variable $X$ to all external forcings. $X$ which is assumed to be representative of climate change magnitude over time.
+					$$ X(t) = \color{purple}{X_{all}}(t) + \epsilon_t = \color{red}{X_{ant}}(t) + \color{green}{X_{nat}}(t) + \epsilon_t$$
 					where $\epsilon_t$ is a noise representing climate internal variability.
 					</p>
 					<p>
 					In the <font color="green"><strong>counterfactual world</strong></font>, 
-					$$ X_t \sim  \mathcal{N}\{\mu_0 + \mu_1 \color{green}{Y_{nat}}(t), \sigma_0 \left[1 + \sigma_1 \color{green}{Y_{nat}}(t)\right]\} $$ 
+					$$ Y_t \sim  \mathcal{N}\{\mu_0 + \mu_1 \color{green}{X_{nat}}(t), \sigma_0 \left[1 + \sigma_1 \color{green}{X_{nat}}(t)\right]\} $$ 
 					</p>
 				</section>
 				<section>
@@ -360,7 +360,16 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 					<p>
 					If Model $m$ satisfies  condition $H_0$, then
 					$$
-					{\color{darkgreen} p_1} = {\color{darkgreen} p_1}^{(m)} \mbox{ with } {\color{darkgreen} p_1}^{(m)} = \mathbb{P}(Z^{(m)} > X^{(m)})
+          \color{darkgreen} {p_1} = \color{darkgreen} {p_1}^{(m)} 
+          $$
+          Indeed,
+          $$
+          \begin{aligned}
+          \color{darkgreen} {p_1}^{(m)} & = \mathbb{P}(Z^{(m)} > X^{(m)}) \\
+          & =  \mathbb{P}\left(G^{\leftarrow} \circ G^{(m)}(Z^{(m)}) > G^{\leftarrow} \circ G^{(m)}(X^{(m)}) \right) \\
+          & \stackrel{H_0}{=} \mathbb{P}\left(F^{\leftarrow} \circ F^{(m)}(Z^{(m)}) > G^{\leftarrow} \circ G^{(m)}(X^{(m)}) \right) \\
+          & =  \mathbb{P}(Z^{(m)} > X^{(m)}) =  \color{darkgreen}{p_1} 
+          \end{aligned}
 					$$
 					<font color = "red"><strong> Under $H_0$, there is no need to correct Model $m$. Huge gain!!! </strong></font>
 					</p>
@@ -416,12 +425,10 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 					</p>
 					<p>
           Test for equality of distribution between samples $\{X_t^{(m)}: t \in T\}$ and $\{Z_t^{(m)}: t \in T\}$. 
-          Here, we use the Cramer-von Mises two-sample test.
+          </p>
+          <p>
+          Here, we choose a period, $T=\{1850:1900\}$, corresponing to the pre-industrial period and we use the Cramer-von Mises two-sample test.
 					</p>
-				</section>
-				<section>
-					<h2> How to judge all the $\color{darkgreen} {\hat{p}_{1,t}}^{(m)}$ ? </h2>
-					<img src="img/tas_cmip5_augustavg_onerun_CvMsimple_qqplot_checkH0.png" height="600" align="center"> 
 				</section>
 				<section>
 					<h2>Averaging climate model contribution</h2>
