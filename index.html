@@ -125,7 +125,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 						<li> Run climate simulations for the factual and counterfactual world. </li>
 						<li> Estimate the probability of the event in both world, $p_1$  and $p_0$:
 							<ul>
-								<li> by counting the number of event that occured in the simulation, <br>
+								<li> by counting the number of event that occured in the simulations, <br>
 									<em> may require a very large ensemble simulations to have an accurate estimate. </em>
 								</li>
 								<li> by fitting a statistical model </li>    
@@ -215,7 +215,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 					<h2> Case study: 2003 European Heatwave (Ribes et al. 2020)</h2>
 					<h3> Variable of interest,  $Y$ </h3> 
 					<p style="margin-left:2em">
-					Average temperature in August in Paris region, i.e. [45N - 50N] x [0E -0E]
+					Average temperature in August in Paris region, i.e. [45N - 50N] x [0E -5E]
 					Temperatures are expressed in terms of anomaly with respect to the 1961-1990 climatology.
 					</p>
 					</p> 
@@ -390,7 +390,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 				</section>
 				<section>
 					<h2>Inference of $\color{purple} {p_1}^{(m)}$</h2>
-					<p> As $\color{purle}{p_{1,t}}^{(m)} =  \mathbb{E}\left( G (Z_t)) \right)$ is  an expectation,
+					<p> As $\color{purle}{p_{1,t}} =  \mathbb{E}\left[ G (Z_t) \right]$ is  an expectation,
 					the Nadaraya-Watson estimator can be defined  
 					$$
 					\color{purple} {\hat{p}_{1,t}}^{(m)} = 
