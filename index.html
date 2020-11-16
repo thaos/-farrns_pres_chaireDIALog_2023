@@ -350,10 +350,10 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 					</p>
 				</section>
 				<section>
-					<h2>The simples case: $r=2$</h2>
+					<h2>The simpler case: $r=2$</h2>
 					<p> Under exchangeability
 					$$
-					\color{green} {p_0} = \mathbb{P}(X > X_1) = \frac{1}{2} \mbox{ and } {\color{purple} p_1} = \mathbb{P}(Z > X)
+          \color{green} {p_0} = \mathbb{P}(X > X_1) = \frac{1}{2} \mbox{ and } \color{purple} {p_1} = \mathbb{P}(Z > X)
 					$$
 					</p>
 
@@ -368,7 +368,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
           \color{darkgreen} {p_1}^{(m)} & = \mathbb{P}(Z^{(m)} > X^{(m)}) \\
           & =  \mathbb{P}\left(G^{\leftarrow} \circ G^{(m)}(Z^{(m)}) > G^{\leftarrow} \circ G^{(m)}(X^{(m)}) \right) \\
           & \stackrel{H_0}{=} \mathbb{P}\left(F^{\leftarrow} \circ F^{(m)}(Z^{(m)}) > G^{\leftarrow} \circ G^{(m)}(X^{(m)}) \right) \\
-          & =  \mathbb{P}(Z^{(m)} > X^{(m)}) =  \color{darkgreen}{p_1} 
+          & =  \mathbb{P}(Z > X) =  \color{darkgreen}{p_1} 
           \end{aligned}
 					$$
 					<font color = "red"><strong> Under $H_0$, there is no need to correct Model $m$. Huge gain!!! </strong></font>
@@ -411,7 +411,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 				</section>
 				<section>
 					<h2> Case study: 2003 European Heatwave</h2>
-					<img src="img/tas_cmip5_augustavg_onerun_CvMsimple_paris.png" height="660" align="center"> 
+					<img src="img/tas_cmip5_augustavg_onerun_experts_paris.png" height="660" align="center"> 
 				</section>
 				<section>
 					<h2> How to judge all the $\color{darkgreen} {\hat{p}_{1,t}}^{(m)}$ ? </h2>
@@ -422,13 +422,22 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 					F^{\leftarrow} \circ F^{(m)} = G^{\leftarrow} \circ G^{(m)} \implies F^{\leftarrow} \circ F^{(m)} = F^{\leftarrow} \circ G^{(m)} \\
 					\color{red}{\implies F^{(m)} = G^{(m)}}
 					$$
+          and that
+					$$
+          \color{red}{p_{1,t}^{(m)} = 1/2 \; \text{for} \;  t \in T}
+					$$
 					</p>
 					<p>
           Test for equality of distribution between samples $\{X_t^{(m)}: t \in T\}$ and $\{Z_t^{(m)}: t \in T\}$. 
           </p>
           <p>
-          Here, we choose a period, $T=\{1850:1900\}$, corresponing to the pre-industrial period and we use the Cramer-von Mises two-sample test.
+          Here, we choose a period, $T=\{1850:1900\}$, corresponing to the pre-industrial period and we use the Anderson-Darling two-sample test.
+          We filter out models whose p-value is lower than $0.2$
 					</p>
+				</section>
+				<section>
+							<h2> QQ-plot and Anderson-Darling test </h2> 
+							<img src="img/tas_cmip5_augustavg_onerun_experts_qqplot_checkH0_paris.png" height="600" align="center"> 
 				</section>
 				<section>
 					<h2>Averaging climate model contribution</h2>
@@ -436,7 +445,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 					$$
 					\color{purple}{\hat{p}_{1,t}}^{(.)}= \sum_{m=1}^{M} w_m \times  \color{purple}{\hat{p}_{1,t}}^{(m)}
 					$$
-					where we chose $w_m$ to be proportional to exponetial of minus the  Cramer-von Mises two-sample statistic. 
+					where we chose $w_m$ so that $\color{purple}{\hat{p}_{1,t}}^{(.)}$ is the closest possible to $1/2$ in the period, $T=\{1850:1900\}$
 					</p>
 					<div class="fragment fade-in">
 					<p>
@@ -452,12 +461,8 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 					</div>
 				</section>
 				<section>
-							<h2> Cramer-von Mises statistic and weights </h2> 
-							<img src="img/tas_cmip5_augustavg_onerun_CvMsimple_CvM.png" height="600" align="center"> 
-				</section>
-				<section>
 							<h2> Multimodel vs Observations </h2> 
-							<img src="img/tas_cmip5_augustavg_onerun_CvMsimple_hadcrut_vs_multimodel_paris.png" height="480" align="center"> 
+							<img src="img/tas_cmip5_augustavg_onerun_experts_obs_paris.png" height="480" align="center"> 
 				</section>
 				<section>
 					<video width="720" height="480" autoplay="autoplay" loop controls>
