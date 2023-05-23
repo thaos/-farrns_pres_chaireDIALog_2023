@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Combination of climate simulations for (extreme) weather event attribution</title>
+		<title> Using climate simulations for (extreme) weather event attribution </title>
 
 		<link rel="stylesheet" href="css/reset.css">
 		<link rel="stylesheet" href="css/reveal.css">
@@ -17,59 +17,65 @@
 		<!-- Printing and PDF exports -->
 		<script>
 			var link = document.createElement( 'link' );
-link.rel = 'stylesheet';
-link.type = 'text/css';
-link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-document.getElementsByTagName( 'head' )[0].appendChild( link );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<section class="center">
-					<h2>Combination of climate simulations for (extreme) weather event attribution </h2>
+					<h2> Using climate simulations for (extreme) weather event attribution </h2>
 					<p>
-					<a href="https://www.lsce.ipsl.fr/Pisp/soulivanh.thao/index.php">Soulivanh Thao (LSCE)</a>
+					<a href="https://www.lsce.ipsl.fr/Pisp/soulivanh.thao/index.php">Soulivanh Thao (LSCE)</a>, Philippe Naveau (LSCE),
+					<br> 
+					Paula Gonzalez (LSCE), Julien Worms (UVSQ),
 					<br>
-					Philippe Naveau (LSCE), Aurelien Ribes (CNRM), Julien Cattiaux (CNRM)
+					Aurelien Ribes (CNRM), Julien Cattiaux (CNRM)
 					</p>
 				</section>
 				<section>
-					<h2>Outline </h2>
-					<h3>
-						<ol>
-							<li>Rapid overview of what is event attribution</li>
-							<li>Multimodel analysis</li>
-						</ol>
-					</h3>
-					<p>
-					Mostly based on these two papers:
-					</p>
-					<ul>
-						<li>Ribes, A., S. Thao and J. Cattiaux, Describing the relationship between a weather event and climate change: a new statistical approach, <em>Journal of Climate</em>, accepted.</li>
-						<li>Naveau P., A. Ribes, F. Zwiers, A. Hannart, A. Tuel, P. Yiou (2018) : Revising return periods for record events in a climate event attribution context, <em>Journal of Climate</em>, 2018. </li>
-					</ul>
+					<h2> World Weather Attribution:  Pacific Northwest 2021 heatwave </h2>
+					
+					<div class="container">
+						<div class="col">
+							<img src="img/NA_Heatwave2021.jpeg">
+						</div>
+						<div class="col">
+							<blockquote>  "such as an event is still rare or extremely rare (a 1 in 1000 year event) in today's climate, yet would be virtually impossible without human-caused climate change."</blockquote> 
+
+							<blockquote> "daily maximum temperatures (TXx) in the heatwave region, as rare as 1 in a 1000 years would have been at least 150 times rarer without human-induced climate change."</blockquote> 
+		
+							<blockquote> "this heatwave was about 2°C  hotter than it would have been if it had occurred at the beginning of the industrial revolution (when global mean temperatures were 1.2°C cooler than today)."</blockquote> 
+						</div>
+					</div>
 				</section>
+
 				<section>
-					<h2> Detection and attribution </h2>
-					<h3>Detection</h3>
-					<blockquote style="margin-left:2em">
-						The process of demonstrating that climate has changed in some defined <font color="blue"><strong>statistical</strong></font> sense without providing a reason for that change. 
-						An identified change is detected if its <font color="blue"><strong> likelihood </strong></font> of occurrence by chance due to <font color="blue"><strong>internal variability</strong></font> alone is determined to be small 
-					</blockquote>
+					<h2> Attribution of climate change</h2>
+				
 					<h3> Attribution </h3>
 					<blockquote style="margin-left:2em">
 						The process of evaluating the relative contributions of multiple <font color="red"><strong>causal factors</strong></font> 
 						to a change or event with an assignment of <font color="blue"><strong>statistical</strong></font> confidence.   
 					</blockquote>
+					<br>
+					<h3> Consequences </h3>
+					<p>
+					Need to assess whether the observed changes are
+					<ul>
+						<li>
+							consistent with the expected responses to external forcings (PS)</li>
+						<li>inconsistent with alternative explanations (PN)</li>
+					</ul>
+					</p>
 					<p><small>
 						Source: <br>
 						IPCC AR5, Chapter 10.
 					</small></p>
-				</section>
-				<section>
-					<h2> Weather, climate and statistics </h2>
-					<img src="img/climate_meteo.png">
 				</section>
 				<section>
 					<h2> Attribution and causality </h2>
@@ -92,14 +98,68 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 				</section>
 				<section>
 					<h2> Importance of climate models in D&A </h2>
-					<p><strong> Counterfactual </strong></p>
-					<p> can never be observed in practice. </p>
-					<p> <strong> Intervention </strong></p>
-					<p> requires to have an experimental group and a control group, which is not possible with only one Earth. </p> 
-					<h3> Solution ? </h3>
-					<p> Use climate models to perform controlled experiements.  </p> 
-					<img src="img/téléchargement.jpeg" height="150" align="middle"> 
+					<div class="container">
+						<div class="col">
+							<p><strong> Counterfactual </strong></p>
+							<p> can never be observed in practice. </p>
+							<p> <strong> Intervention </strong></p>
+							<p> requires to have an experimental group and a control group, which is not possible with only one Earth. </p> 
+							<p> <strong> Solution ? </strong></p>
+							<p> Use climate models to perform controlled experiements.  </p> 
+						</div>
+						<div class="col">
+							<img src="img/mfig002.jpg" height="200" align="center"> 
+						</div>
+					</div>					
 				</section>
+				<section>
+					<h2> CMIP ? and projections</h2>
+				</section>
+
+				<section>
+					<h2> But we still need observations and statistical models</h2>
+					<p>
+						<ul>
+							<li>To check wether climate models are consistents with observations</li>
+							<li>To link climate models and observations
+							<li>To infer quantities of interest</li>
+						</ul>
+						</p>				
+				</section>
+
+				<section>
+					<h2> Attribution of Global Mean Surface Temperature Trends</h2>
+					<div class="container">
+						<div class="col">
+							<p><img src="img/FigFAQ10.1-1-1.jpg" height="400" align="center"> </p>
+						
+							<p><small>
+								Source: <br>
+								IPCC AR5, FAQ 10.1, Figure 1 |
+							</small></p>
+						</div>
+						<div class="col">
+							<p> <strong> Statistical Model </strong></p>
+							$$
+								\begin{array}{ll}
+								Z^* = \mu + \sum_{i = n}^N \beta_i R_i^* \\
+								Z = Z^* + \varepsilon_Z \\
+								R_i = R_i^* + \varepsilon_{R_i} \quad \text{for } i = 1, ..., N.\\
+								\end{array}
+							$$
+							<p> $Z$ is the climate state observed at a given time, which is therefore impacted by climate internal variability $\varepsilon_Z$.</p>
+
+							<p>$R_i$ is a response to forcing $i$ simulated by a climate model. It includes the contribution of the internal variability $\varepsilon_{R_i}$ simulated by the climate model.</p>
+
+						</div>
+				</section>
+				
+				<section>
+					<h2> Attribution of Extreme Events </h2>
+						
+						<p><img src="img/EEA_threshold-1.png" height="600" align="center"> </p>
+				</section>
+
 				<section>
 					<h2> Defining the event (only univariate)</h2>
 					<ol>
@@ -109,9 +169,7 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 							<em>e.g. maximum over Europe of 10-day temperature averages</em> </li>
 						<li> Define the conditioning. <br>
 							<em>e.g. only during JJA, only for NAO+ circulation type, ...</em> </li>
-						<li> Define the statistics. <br> 
-							<em>typically,  probability of threshold exceedances</em> </br>
-							<img src="img/extreme_da_3.png" height="250" align="center"> 
+						<li> Define the threshold
 						</li>
 					</ol>
 					<p><small>
@@ -119,51 +177,73 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 						Cattiaux, J. and A. Ribes, 2018: Defining Single Extreme Weather Events in a Climate Perspective. <em>Bull. Amer. Meteor. Soc.</em>, 99, 1557–1568, https://doi.org/10.1175/BAMS-D-17-0281.1 
 					</small></p>
 				</section>
+
 				<section>
-					<h2>  Estimating the probability of the event</h2>
-					<ol>
-						<li> Run climate simulations for the factual and counterfactual world. </li>
-						<li> Estimate the probability of the event in both world, $p_1$  and $p_0$:
-							<ul>
-								<li> by counting the number of event that occured in the simulations, <br>
-									<em> may require a very large ensemble simulations to have an accurate estimate. </em>
-								</li>
-								<li> by fitting a statistical model </li>    
-								<em> require to make an assumption about the statistical distribution </em>
-							</ul>
-						</li>
-						<ol>   
-				</section>
-				<section>
-					<h2>  Choice of the statistical distribution</h2>
-					<p> Theorems on asymptotic convergence in distribution can provide good approximations <p>
-					<ul>
-						<li> Central Limit Theorem: 
-							<ul>
-								<li>
-									Gaussian distribution. <br>
-									<em> sums </em>
-								</li>
-							</ul>
-						</li>
-						<li> Extreme Value Theory:
-							<ul>
-								<li> Generalized extreme value distribution (GEV)<br>
-									<em> block maxima </em><br>
-									<img src="img/blockmaxima.png" height="120">
-								</li>
-								<li> Generalized Pareto distribution (GPD)<br>    
-									<em> peak over threshold, threshold exceedances </em><br>
-									<img src="img/peakovethreshold.png" height="120">
-								</li> 
-							</ul>
-						</li>
-					</ul>   
+					<h2> Case study: 2019 July Heatwave in France (Robin et Ribes al. 2020)</h2>
+
+					<p><strong> Event definition: </strong></p>
+					<p style="margin-left:2em">
+					Annual maxima of 3-day average temperature anomalies in France, i.e. [42N - 51N] x [5W -10E] above +4.98 Kp
+					</p>
+					<p>
+					<img src="img/HeatwaveJuly2019.png"/>
+					</p>
+
+					
+
 					<p><small>
-						Source: <br>
-						Coles, S. (2001) An Introduction to Statistical Modeling of Extreme Values. Springer Verlag, Berlin. 
-						http://dx.doi.org/10.1007/978-1-4471-3675-0
+						More on this: <br>
+						Robin, Yoann ; Drouin, Agathe ; Soubeyroux, Jean-Michel ; Ribes, Aurélien ; Vautard, Robert. Comment attribuer une canicule au changement climatique ?. <em>La Météorologie</em>, 115, 28-36, 2021.
 					</small></p>
+
+				</section>
+
+				<section>
+					<h2> Data </h2>
+					<p>
+					Simulations from 26 models from the Coupled Model Intercomparison Project 5 (CMIP5). </p>
+					<p>Data are extracted for the experiences: <br>
+					<ul style="margin-left:2em">
+						<li> <strong>historical</strong>, corresponding to the climate in the factual world (1850-2005)</li>
+						<li> <strong>rcp8.5</strong>, corresponding to climate projections for the future of the factual world(2006-2100)</li>
+					</ul>
+					</p>
+					<p>
+					Météo-France thermal index is used as observation. It corresponhs to the average of observations from 30 ground stations, showing data available between 1947 and 2019 </p>
+					</p>
+					<p>
+						<img src="img/TM3X_CMIP5.png" height="300" align="center"/>
+						</p>
+				</section>
+
+				<section>
+					<h2> Bayesian Models </h2>
+					<p><strong> Factual World </strong></p>
+					<p>
+						$$\begin{aligned}
+							Z_t &\sim GEV(\mu_0 + \mu_1 C^{F}_t, exp(\sigma_0 + \sigma_1 C^{F}_t), \xi) \\
+							C^{F}_t &= C^{NAT}_t + C^{ANT}_t + \epsilon_{IV} \\
+							\epsilon_{IV}  &\sim  \mathcal{N}(0, \sigma_{IV}^2)
+						\end{aligned}$$
+					</p>
+
+					<p><strong> Counterfactual World </strong></p>
+					<p>
+						$$\begin{aligned}
+							X_t &\sim GEV(\mu_0 + \mu_1 C^{CF}_t, exp(\sigma_0 + \sigma_1 C^{CF}_t), \xi) \\
+							C^{CF}_t &= C^{NAT}_t  + \epsilon_{IV} \\
+							\epsilon_{IV}  &\sim  \mathcal{N}(0, \sigma_{IV}^2)
+						\end{aligned}$$
+					</p>
+
+					<p><strong> Prior distribution </strong></p>
+					<p>
+						$$\begin{aligned}
+							\theta &=  [\mu_0, \mu_1, \sigma_0, \sigma_1, \xi, C^{NAT}, C^{ANT}] \\
+							&\sim  \mathcal{N}(\mu_\theta, \sigma_\theta^2)
+						\end{aligned}$$
+					</p>
+					<p> We use the distribution of the CMIP5 model as prior	</p>	
 				</section>
 				<section>
 					<h2> Generalized Extreme Value distribution</h2>
@@ -187,106 +267,30 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 					</p>
 				</section>
 				<section>
-					<h2> Generalized Pareto Distribution (GPD)</h2>
-					<p> 
-					The model focuses on the statistical behavior of
-					$$(X - u) | (X > u) $$
-					where X has a distribution function $F$
-					</p> 
-					<p> <strong> Theorem </strong> <br>
-					<!--If $\mathbb{P}\{M_n\leq z \} \rightarrow G(z)$  as  $m \rightarrow \infty $ where   
-	     $M_n = max\{X_1 , ... , X_n\}$ and G is a member of the GEV family, then for $u$ large enough,
-	     $$\mathbb{P}\{(X - u) < y| (X > u)\}  \approx H(y) = 1 - \left(1 + \frac{\xi y}{\tilde{\sigma}} \right)^{-1/\xi}$$
-	     defined on $\{y : y > 0$ and $(\xi y / \tilde{\sigma}) > 0 \}$
-	     where  $\tilde{\sigma} =  \sigma + \xi (u - \mu)$ <span style="float:right;">$\Box$ </span> -->
-	     If as  $n \rightarrow \infty$, $M_n = max\{X_1 , ... , X_n\}$ converges in distribution towards $G$, a member of the GEV family, then for $u$ large enough,  the distribution function of $(X - u) | (X > u) $  can be approximated by 
-	     $$H(y) = 1 - \left(1 + \frac{\xi y}{\tilde{\sigma}} \right)^{-1/\xi}$$
-	     defined on $\{y : y > 0$ and $(\xi y / \tilde{\sigma}) > 0 \}$
-	     where  $\tilde{\sigma} =  \sigma + \xi (u - \mu)$ <span style="float:right;">$\Box$ </span> 
-					</p>
-					<p> <strong> Remark. </strong> As for the GEV distribution, the shape parameter $\xi$ is characterizing the behavior of the tail of the distribution: 
-					<ul>
-						<li> $\xi < 0$, the distribution has a light tail with an upper bound equal to $\mu - \tilde{\sigma} / \xi$ </li>
-						<li> $\xi = 0$, the distribution has an exponenential tail. This case is interpreted by taking the limit,  $\lim_{\xi \rightarrow 0} H(y)$</li>
-						<li> $\xi > 0$, the distribution has an heavy tail. </li>
-					</ul>
+					<h2> GEV fits </h2>
+						<p>
+							<img src="img/GEVfit.png" height="600" align="center"/>	
+						</p>
 				</section>
 				<section>
-					<h2> Case study: 2003 European Heatwave (Ribes et al. 2020)</h2>
-					<h3> Variable of interest,  $Y$ </h3> 
-					<p style="margin-left:2em">
-					Average temperature in August in Paris region, i.e. [45N - 50N] x [0E -5E]
-					Temperatures are expressed in terms of anomaly with respect to the 1961-1990 climatology.
-					</p>
-					</p> 
-					<h3> Event definition </h3>
-					<p style="margin-left:2em">
-					$$\{Y \geq u\}$$ where $u = +5.38$&deg C, the actual anomaly of temperature observed in August 2003
-					</p>
-					</p>
+					<h2> Global Mean Surface Temperature as covariate </h2>
+						<p>
+							<img src="img/GEVcovariate.png" height="600" align="center"/>	
+						</p>
 				</section>
 				<section>
-					<h2> Data </h2>
-					<p>
-					Simulations from CNRM-CM5 model in the context of the Coupled Model Intercomparison Project 5 (CMIP5). </p>
-					<p>Data are extracted for the experiences: <br>
-					<ul style="margin-left:2em">
-						<li> <strong>historical</strong>, corresponding to the climate in the factual world (1850-2005)</li>
-						<li> <strong>rcp8.5</strong>, corresponding to climate projections for the future of the factual world(2006-2100)</li>
-					</ul>
-					</p>
-					<p>
-					<strong> Remark. </strong> In this study, no "historical-nat" simulations are used to represent the <font color="green"><strong> counterfactual world </strong></font> 
-					</p> 
+					<h2> Posterior: change in probability </h2>
+						<p>
+							<img src="img/GEVproba.png" height="600" align="center"/>	
+						</p>
 				</section>
 				<section>
-					<h2> Statistical Model for $Y$</h2>
-					<p>
-					In the <font color="purple"><strong>factual world</strong></font>, 
-					$$ Y_t \sim  \mathcal{N}\{\mu_0 + \mu_1 \color{purple}{X_{all}}(t), \sigma_0 \left[1 + \sigma_1 \color{purple}{X_{all}}(t)\right]\} $$ 
-					where $\color{purple}{X_{all}}$ is the determimistic response of a climate variable $X$ to all external forcings. $X$ which is assumed to be representative of climate change magnitude over time.
-					$$ X(t) = \color{purple}{X_{all}}(t) + \epsilon_t = \color{red}{X_{ant}}(t) + \color{green}{X_{nat}}(t) + \epsilon_t$$
-					where $\epsilon_t$ is a noise representing climate internal variability.
-					</p>
-					<p>
-					In the <font color="green"><strong>counterfactual world</strong></font>, 
-					$$ Y_t \sim  \mathcal{N}\{\mu_0 + \mu_1 \color{green}{X_{nat}}(t), \sigma_0 \left[1 + \sigma_1 \color{green}{X_{nat}}(t)\right]\} $$ 
-					</p>
+					<h2> Posterior: change in intensity </h2>
+						<p>
+							<img src="img/GEVintensity.png" height="600" align="center"/>	
+						</p>
 				</section>
-				<section>
-					<h2> Decomposition of the covariable $X$ </h2>
-					<img src="img/covariable_decomposition.png" align="center"> 
-				</section>
-				<section>
-					<h2> Fit of the Gaussian model </h2>
-					<img src="img/nonstationnaryfit.png" align="center"> 
-				</section>
-				<section>
-					<h2> Estimation of the probability of the event</h2>
-					<img src="img/p0p1PRt.png" height="640" align="center"> 
-				</section>
-				<section>
-					<h2> Are different models consistent ?</h2>
-					<img src="img/PRallmodels.png" height="640" align="center"> 
-				</section>
-				<section>
-					<h2> Why the discrepancies ?</h2>
-					<h3> Internal variability </h3>
-					<p style="margin-left:2em"> 
-					Modelled as a noise, with potentially long term memory. <br>
-					Need to be careful when looking at trends.
-					</p>
-					<h3> Modelling uncertainty  </h3>
-					<p style="margin-left:2em"> 
-					Models are based on the same physical equations but potentially different approximations and parametrization. <br>
-					Models are harder to tune due to their increasing complexity and number of components. <br>
-					Climate sensitivity (global warming associated with a doubling of atmospheric carbon dioxide) ranges from 2 to 4.5 K (CMIP5).</p>
-					<p><small>
-						Source: <br>
-						Stevens, B. and S. Bony, 2013 : What are climate models missing? Science, 340 (6136), 1053-1054.
-					</small></p>
-					<!--v "additional complexity has multiplied the ways in which these biases introduce uncertainties in climate simulations" -->
-				</section>
+
 				<section>
 					<h2>Let's take a few steps back</h2>  
 					<h3>Event attribution is about comparing two distributions </h3>	
@@ -329,52 +333,178 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 				</section>
 				<section>
 					<h2>A fundamental condition  in D&A</h2>
-					<h3><strong> $$ H_0: \;\; F^{\leftarrow} \circ F^{(m)} = G^{\leftarrow} \circ G^{(m)}%   \mbox{ for all $m=1, \dots, M.$} $$ </strong><h3>
+					<h3><strong> $$ A: \;\; F^{\leftarrow} \circ F^{(m)} = G^{\leftarrow} \circ G^{(m)}%   \mbox{ for all $m=1, \dots, M.$} $$ </strong><h3>
 					<h3> Climatological  interpretation </h3> 
 					<p> The  discrepancy  between  numerical model $m$  and  the true world stays the same in the <font color="purple"><strong>factual</strong></font> and <font color="green"><strong>counterfactual</strong></font> worlds. </p>
 					<div class="fragment fade-in">
 					<h3> Mathematical consequence of $H_0$ </h3>
-					<p> Under $H_0$, it is possible to easily make <font color = "red"><strong>relative</strong></font>  comparisons of probabilities </p> 
+					<p> Under $A$, it is possible to easily make <font color = "red"><strong>relative</strong></font>  comparisons of probabilities </p> 
 					</div>
 				</section>
 				<section>
 					<h2>Change of lenses: relative comparison of probabilities</h2>
 					<p >Instead of studying exceedance probabilities like 
-					$$ \color{green}{p_0} = \mathbb{P}(X > u ) \; \text{ and  } \; \color{purple}{p_1}=\mathbb{P}(Z > u ),$$
+					$$ \color{green}{p_0(t)} = \mathbb{P}(X_t > u ) \; \text{ and  } \; \color{purple}{p_1(t)}=\mathbb{P}(Z_t > u ),$$
 					we will estimate and interpret record probabilities 
 					like 
-					$$ \color{green}{p_0}(r) = \mathbb{P}(X > \max(X_1, \dots, X_{r-1})) $$
+					$$ \color{green}{p_{0,r}(t)} = \mathbb{P}(X_t > \max(X_{t-1}, X_{t-2}, \dots, X_{t-r+1})) $$
 					and
-					$$\color{purple} {p_1}(r) = \mathbb{P}(Z > \max(X_1, \dots, X_{r-1})) $$
-					where the usual threshold $u$ has been replaced by $\max(X_1, \dots, X_{r-1})$.
+					$$\color{purple} {p_{1,r}(t)} = \mathbb{P}(Z_t > \max(X_{t-1}, X_{t-2}, \dots, X_{t-r+1})) $$
+					where the usual threshold $u$ has been replaced by $ \max(X_{t-1}, X_{t-2}, \dots, X_{t-r+1})$.
 					</p>
 				</section>
 				<section>
-					<h2>The simpler case: $r=2$</h2>
-					<p> Under exchangeability
-					$$
-          \color{green} {p_0} = \mathbb{P}(X > X_1) = \frac{1}{2} \mbox{ and } \color{purple} {p_1} = \mathbb{P}(Z > X)
-					$$
-					</p>
-
+					<h3>Records in the counterfactual world: $\color{green}{p_0,r}(t) = \mathbb{P}(X_t > \max(X_{t-1}, \dots, X_{t-r+1})) $</h3>
 					<p>
-					If Model $m$ satisfies  condition $H_0$, then
-					$$
-          \color{darkgreen} {p_1} = \color{darkgreen} {p_1}^{(m)} 
-          $$
-          Indeed,
-          $$
-          \begin{aligned}
-          \color{darkgreen} {p_1}^{(m)} & = \mathbb{P}(Z^{(m)} > X^{(m)}) \\
-          & =  \mathbb{P}\left(G^{\leftarrow} \circ G^{(m)}(Z^{(m)}) > G^{\leftarrow} \circ G^{(m)}(X^{(m)}) \right) \\
-          & \stackrel{H_0}{=} \mathbb{P}\left(F^{\leftarrow} \circ F^{(m)}(Z^{(m)}) > G^{\leftarrow} \circ G^{(m)}(X^{(m)}) \right) \\
-          & =  \mathbb{P}(Z > X) =  \color{darkgreen}{p_1} 
-          \end{aligned}
-					$$
-					<font color = "red"><strong> Under $H_0$, there is no need to correct Model $m$. Huge gain!!! </strong></font>
+						<img src="img/EEA_records1901-1.png" height="600" align="center"/>	
 					</p>
 				</section>
 				<section>
+					<h3>Records in the counterfactual world:: $\color{green}{p_0,r}(t) = \mathbb{P}(X_t > \max(X_{t-1}, \dots, X_{t-r+1})) $</h3>
+					<p>
+						<img src="img/EEA_records2001dens-1.png" height="600" align="center"/>	
+					</p>
+				</section>
+				<section>
+					<h2>Exchangeable random sequences</h2>
+					<p>
+						$$\mathbb{P}( X_t >  \max(X_{t-1}, X_{t-2}, \dots, X_{t-r+1})) = \frac{1}{r}$$
+					
+						<ul>
+							<li>
+								No need to view data to compute this probability of record: <em>universal yardstick</em>
+							</li>
+							<li>
+								This equality is <em>relative</em> and does not depend on the marginal type: {\it bypassing bias-correction}
+							</li>
+						</ul>
+					</p>
+				</section>
+				<section>
+					<h3>Can a factual realizations be a record in the counterfactual world? $\color{green}{p_1,r}(t) = \mathbb{P}(Z_t > \max(X_{t-1}, \dots, X_{t-r+1}))$</h3>
+					<p>
+						<img src="img/EEA_recordsZ2001dens-1.png" height="600" align="center"/>	
+					</p>
+				</section>
+
+				<section>
+					<h2>Under exchangeability of $X_t$ and if Model $m$ satisfies  condition $A$</h2>
+					$$
+						\color{darkgreen} {p_{1,r}(t)} = \color{darkgreen} {p_{1,r}(t)}^{(m)} 
+						$$
+						Indeed,
+						$$
+						\begin{aligned}
+						\color{darkgreen}  {p_{1,r}(t)}^{(m)} & = \mathbb{P}(Z_t^{(m)} > \max(X_{t-1}^{(m)}, \dots, X_{t-r+1}^{(m)}))  \\
+						& = \mathbb{P}(Z_t^{(m)} > X_{t-1}^{(m)},  \dots, Z_t^{(m)} > X_{t-r+1}^{(m)})  \\
+						& = \mathbb{P}\left(G^{\leftarrow} \circ G^{(m)}(Z_t^{(m)}) > G^{\leftarrow} \circ G^{(m)}(X_{t-1}^{(m)}),  \dots,  G^{\leftarrow} \circ G^{(m)}(Z_t^{(m)}) > G^{\leftarrow} \circ G^{(m)}(X_{t-r+1}^{(m)})  \right)\\
+						& \stackrel{A}{=}\mathbb{P}\left(F^{\leftarrow} \circ F^{(m)}(Z_t^{(m)}) > G^{\leftarrow} \circ G^{(m)}(X_{t-1}^{(m)}),  \dots,  F^{\leftarrow} \circ F^{(m)}(Z_t^{(m)}) > G^{\leftarrow} \circ G^{(m)}(X_{t-r+1}^{(m)})  \right)\\
+						& = \mathbb{P}(Z_t > X_{t-1},  \dots, Z_t > X_{t-r+1}) \\
+						& = \mathbb{P}(Z_t > \max(X_{t-1}, \dots, X_{t-r+1}))   =  \color{darkgreen} {p_{1,r}(t)}
+						\end{aligned}
+					$$
+					<p>
+					<font color = "red"><strong> Under $A$, there is no need to correct Model $m$. Huge gain!!! </strong></font>
+					</p>
+				</section>
+				<section>
+					<h3>Distribution of $W= - \log {G}(Z)$     when $G$ describes annual maxima and $Z$ too? </h3>
+					<p>
+						If  $X \sim GEV(\mu_X,\sigma_X, \xi_X)$ and $Z \sim GEV(\mu_Z,\sigma_Z, \xi_Z)$ , then       
+                   		$$ W \sim \mbox{Weibull}(k,\lambda) \mbox{ with } 
+							k=\xi_X/\xi_Z   \mbox{ and }  \lambda= \left( k\times \sigma_Z/\sigma_X \right)^{-1/\xi_X}, % & \mbox{, if $\xi_X \xi_Z > 0$.}
+						$$
+					</p>
+					<img src="img/GEV_Weibull.png" height="300" align="center"/>	
+				</section>
+		
+				<section>
+				<h3>Estimation algorithm of ${\color{darkgreen} {p_{1,r}(t)}}$ </h3>
+				<p>			
+					<strong>Under Weibull assumption</strong>,
+					$p_{1,r}(t)=\int_0^1\exp(-(r-1)\color{purple}{\lambda_t}(-\log x)^{1/\color{purple}{k_t}})\,dx$
+				</p>	
+				<p>
+					<strong>Estimation algorithm</strong>:
+				</p>	
+				<p>
+
+					- Step 1: $\forall \,t$,
+						$$ \widehat{p_{1,2}}(t)=\sum_{j=1}^n
+							\frac{K_h(t-t_k)}{\sum_{k=1}^n K_h(t-t_k)}\mathbb{G}(Z_{t_j})
+							\qquad  \widehat{p_{1,3}}(t)=\sum_{j=1}^n
+							\frac{K_h(t-t_k)}{\sum_{k=1}^n K_h(t-t_k)}\mathbb{G}^{2}(Z_{t_j})$$
+				</p>	
+				<p>
+					- Step 2: for a chosen $t$,
+						$$\begin{equation*}
+						\left\lbrace
+						\begin{array}{l}
+						\widehat{p_{1,2}}(t)=\int_0^1\exp(-\color{purple}{\hat{\lambda}_t}(-\log x)^{1/\color{purple}{\hat{k}_t}})\,dx\\
+						\widehat{p_{1,3}}(t)=\int_0^1\exp(-2\color{purple}{\hat{\lambda}_t}(-\log x)^{1/\color{purple}{\hat{k}_t}})\,dx\,.
+						\end{array}
+						\right.\rightsquigarrow (\color{purple}{\hat{k}_t},\color{purple}{\hat{\lambda}_t})\end{equation*}$$
+				</p>
+				<p>
+					- Step 3:$\qquad$
+						$\widehat{p_{1,r}}(t)\leftarrow\int_0^1\exp(-(r-1)\color{purple}{\hat{\lambda}_t}(-\log x)^{1/\color{purple}{\hat{k}_t}})\,dx$\\
+				</p>
+		
+			</section>
+			<section>
+				<h2> Practical facts </h2>
+				<ul> 
+					<li> GEV distributions  are never fitted in this study
+					<li> The Weibull goodness of fit  can be checked 
+					<li> We don't need to observe a record to compute a record probability 
+					<li> Extrapolation can be done, i.e. take $r$ larger than the sample size
+				<ul> 
+			</section>
+
+		
+			<section>
+				<h2> Yearly maxima of daily precipitation at Richmond grid-point  (IPSL, rcp8.5) </h2>
+
+				<img src="img/valpred_virginia.png" height="500" width="1500" align="center"/>	
+
+			</section>
+
+			<section>
+				<h2> Yearly maxima of daily precipitation from climate model IPSL (worse scenario)</h2>
+
+				<img src="img/valpred2023_carte1.png" height="500" align="center"/>	
+			</section>
+
+			<section>
+				<h2> How to check $A$ </h2>
+					<p> If we assume that there is a period of time, $T$,  when the <font color="purple"><strong> factual climate</strong> </font> is like the <font color="green"><strong> counterfactual climate</strong> </font>, i.e.
+					$$ F_t \overset{d}{=} G \; \text{for} \;  t \in T $$
+					then, for the period $T$, it implies that under $A$ 
+					$$
+					F^{\leftarrow} \circ F^{(m)} = G^{\leftarrow} \circ G^{(m)} \implies F^{\leftarrow} \circ F^{(m)} = F^{\leftarrow} \circ G^{(m)} \\
+					\color{red}{\implies F^{(m)} = G^{(m)}}
+					$$
+          and that
+					$$
+          \color{red}{p_{1,t}^{(m)} = 1/2 \; \text{for} \;  t \in T}
+					$$
+					</p>
+					<p>
+          Test for equality of distribution between samples $\{X_t^{(m)}: t \in T\}$ and $\{Z_t^{(m)}: t \in T\}$. 
+          </p>
+			</section>
+
+			<section>
+				<h2> Limits </h2>
+				<ul> 
+					<li> Only univariate yearly time-series
+					<li> Not usable for impact models
+
+				<ul> 
+			</section>	
+
+	
+			<section>
 					<h2>Inference of $\color{purple} {p_1}^{(m)}$</h2>
 					<p> We assume that:
 					<ul> 
