@@ -1,7 +1,14 @@
-.container{
+.container {
     display: flex;
-}
-.col{
-    flex: 1;
+    column-gap: 40px;
 }
 
+.col {
+    flex: 1;
+
+}
+
+.largecol {
+    flex: 5;
+    column-gap: 20px;
+}
